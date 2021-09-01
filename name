@@ -58,4 +58,4 @@ universalesp.TextSize = 23.000
 universalesp.MouseButton1Down:connect(function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/fernandoagoncalves/universal-esp/main/esp.lua", true))()
 
-end) 
+end)
