@@ -1,0 +1,61 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local bloxburgautofarm = Instance.new("TextButton")
+local universalesp = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+main.BorderColor3 = Color3.fromRGB(27, 42, 53)
+main.Position = UDim2.new(0.589329004, 0, 0.261349708, 0)
+main.Size = UDim2.new(0, 432, 0, 284)
+main.Active = true
+main.Draggable = true
+
+TextLabel.Parent = main
+TextLabel.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+TextLabel.Size = UDim2.new(0, 432, 0, 50)
+TextLabel.Font = Enum.Font.PermanentMarker
+TextLabel.Text = "GUI HUB"
+TextLabel.TextColor3 = Color3.fromRGB(255, 85, 255)
+TextLabel.TextSize = 25.000
+
+bloxburgautofarm.Name = "bloxburg autofarm"
+bloxburgautofarm.Parent = main
+bloxburgautofarm.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+bloxburgautofarm.Position = UDim2.new(0, 0, 0.376760572, 0)
+bloxburgautofarm.Size = UDim2.new(0, 200, 0, 50)
+bloxburgautofarm.Font = Enum.Font.PermanentMarker
+bloxburgautofarm.Text = "BloxBurg AutoFarm"
+bloxburgautofarm.TextColor3 = Color3.fromRGB(255, 85, 255)
+bloxburgautofarm.TextSize = 23.000
+bloxburgautofarm.MouseButton1Down:connect(function()
+	getgenv().http_request = http_request or request or (http and http.request) or syn.request 
+	repeat until http_request
+	loadstring(http_request({Url="https://raw.githubusercontent.com/alphaalt0409/WEIRDAPPLEBEEPANEL/main/weirdapplebee.lua",Method="GET"}).Body)()
+end)
+
+universalesp.Name = "universal esp"
+universalesp.Parent = main
+universalesp.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+universalesp.Position = UDim2.new(0, 0, 0.704225361, 0)
+universalesp.Size = UDim2.new(0, 200, 0, 50)
+universalesp.Font = Enum.Font.PermanentMarker
+universalesp.Text = "Universal Esp"
+universalesp.TextColor3 = Color3.fromRGB(255, 85, 255)
+universalesp.TextSize = 23.000
+universalesp.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/fernandoagoncalves/universal-esp/main/esp.lua", true))()
+
+end) 
